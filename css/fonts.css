@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "zdyk";
+    src: url('../fonts/ZdykSagittarius.otf') format("opentype");
+    /* not variable */
+}
+
+@font-face {
+    font-family: "dovahkiin";
+    src: url('../fonts/Dovahkiin.otf') format("opentype");
+    /* not variable */
+}
+
+@font-face {
+    font-family: "angst";
+    src: url('../fonts/AngstVF.woff2') format("woff2");
+    /* "wght" 0-100, "srff" 0-100 
+    "salt" Stylistic Alternates
+    */
+}
+
+@font-face {
+    font-family: "bazilikin";
+    src: url('../fonts/Bazilikin-Variable.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "kaminoB";
+    src: url('../fonts/Kamino-Bottom.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "kaminoT";
+    src: url('../fonts/Kamino-Top.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: "kamino";
+    src: url('../fonts/Kamino-VF.ttf') format("truetype");
+}

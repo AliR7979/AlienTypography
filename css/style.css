@@ -1,0 +1,342 @@
+@import url(fonts.css);
+
+*{
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html,
+body {
+    margin: 0;
+    background-color: black;
+
+}
+
+.st0{display:none;}
+.st1{display:inline;}
+
+.st0{fill:none;stroke:#ffffff;stroke-width:25;stroke-miterlimit:10;}
+
+/* -----------------------------section1--------------------------------- */
+
+.landing {
+    min-width: 100%;
+    min-height: 250vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    background: url(../images/alien--romulus-textless-poster-185036.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: contrast(120%) saturate(1.5);
+}
+
+.landing--text {
+    padding-top: 2em;
+    font-family: "zdyk";
+    animation-name: changer;
+    animation-duration: 5s;
+    font-size: 4.5em;
+    animation-iteration-count: infinite;
+}
+
+.landing--text h4, p {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+
+}
+
+.landing--text h1 {
+    margin: 0;
+}
+
+@keyframes changer {
+    0%{
+        color: #fff;
+        opacity: 0.01;
+        font-variation-settings: "wght" 0;
+        letter-spacing: 0em;
+
+    }
+
+    25%{
+        color: #fff;
+        opacity: 0.5;
+        font-variation-settings: "wght" 100;
+    }
+
+    50%{
+        color: #fff;
+        opacity: 1;
+        font-variation-settings: "wght" 200;
+        letter-spacing: .2em;
+    }
+
+    75%{
+        color: #fff;
+        opacity: 0.5;
+        font-variation-settings: "wght" 100;
+    }
+
+    100%{
+        color: #fff;
+        opacity: 0.01;
+        font-variation-settings: "wght" 0;
+        letter-spacing: 0em;
+    }
+}
+
+.creator svg {
+    fill: aqua;
+    width: 60px;
+    margin-top: 4em;
+}
+
+/* -----------------------------section2--------------------------------- */
+
+.alien {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: #ffe600;
+    position: relative;
+}
+
+.alien-image {
+    position: absolute;
+    max-height: 45em;
+    transform: translate(32%, 15%);
+    z-index: 3;
+    filter: saturate(20) brightness(1.5) contrast(1.5) sepia(1);
+
+}
+
+.alien h2 {
+    font-size: 14.25em;
+    font-family: "kaminoT";
+    padding: 0em 1em 0em .5em;
+    margin: 0;
+    z-index: 2;
+    animation-name: topToBottom;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes topToBottom {
+    0%{
+        font-variation-settings: "wght" 1000;
+        font-family: 'kamino';
+    }
+
+/*     25%{
+        font-variation-settings: "wght" 25;
+        font-family: 'kamino';
+    }
+ */
+    50%{
+        font-variation-settings: "wght" 0;
+        font-family: 'kamino';
+    }
+
+/*     75%{
+        font-variation-settings: "wght" 25;
+        font-family: 'kamino';
+    } */
+
+    100%{
+        font-variation-settings: "wght" 1000;
+        font-family: 'kamino';
+    }
+}
+
+.alien-content {
+    flex-grow: 1;
+}
+
+.alien-content p {
+    font-size: 2em;
+    font-family: "zdyk";
+    margin: 0;
+    padding-right: 2em;
+}
+
+.alien-content p + p {
+    margin-top: 50px; /* Add space above the second <p> tag */
+}
+
+/* -----------------------------section3--------------------------------- */
+
+.grid {
+    padding: 4em;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #353535;
+    color: #fff;
+    font-family: 'zdyk';
+    font-size: 4em;
+    transition: all 1000ms;
+    border-radius: 40px;
+    padding: 1em;
+    cursor: pointer;
+}
+
+.card:hover{
+    animation-name: changeFont;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes changeFont {
+    0%{
+        font-variation-settings: "wght" 10, "srff" 0;
+        font-family: 'angst';
+        color: #fff;
+    }
+
+/*     25%{
+        font-variation-settings: "wght" 100, "srff" 25;
+    } */
+
+    50%{
+        font-variation-settings: "wght" 0, "srff" 100;
+        font-family: 'angst';
+        animation: ease-out;
+        color: #fff;
+    }
+
+    55%{
+        font-family: 'dovahkiin';
+        animation: ease-in;
+        color: #e3fcfc;
+    }
+
+    100%{
+        font-family: 'dovahkiin';
+        animation: ease-in-out;
+        color: aqua;
+    }
+}
+
+/* -----------------------------section4--------------------------------- */
+
+.text-wrapper {
+    width: 100%;
+    animation: flicker .5s infinite;
+    position: relative;
+    padding: 5em 25em 0em 25em;
+    margin: 0;
+}
+
+.text{
+    font-family: 'dovahkiin';
+    color: aqua;
+    font-size: 2em;
+    text-shadow: 0 0 4px #fff;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* -----------------------------section5--------------------------------- */
+
+.contain {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15%;
+    background-image: url("../images/svg/suns.png");
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: 55%;
+}
+
+.contain p {
+    font-size: 2em;
+}
+
+.contain p:hover {
+    font-size: 2em;
+
+}
+
+.normal {
+    color:#fff;
+    font-family: 'angst' !important;
+    font-size: .75em;
+}
+
+#normal--1 {
+    font-size: 2em;
+    text-align: center;
+    font-variation-settings: "wght" 1, "srff" 80;
+}
+
+.contain .morse:hover {
+    color:#ffe600;
+}
+
+/* -----------------------------section6--------------------------------- */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3em;
+}
+
+.morse {
+    color: aqua;
+    font-family: 'dovahkiin' ;
+    font-size: 3.5em;
+    text-align: center;
+}
+
+.morse:hover {
+    color:#fff;
+    font-family: 'angst' !important;
+    font-size: 3.5em;
+    font-variation-settings: "wght" 1, "srff" 90;
+}
+
+.alien-outline {
+    position: absolute;
+    max-height: 30em;
+    transform:translate(-100%, -65%);
+    opacity: 0.25;
+    z-index: 1;
+}
